@@ -1,0 +1,33 @@
+Contact Us
+<a href="{% url 'home' %}" >home</a>
+<form action='contact' method='POST'>
+{{ form.non_field_errors}}
+{% csrf_token %}
+    <p>
+            {{ form.subject.errors }}
+            {{ form.subject.label_tag }}
+            {{ form.subject }}
+    </p>
+     <p>
+            {{ form.message.errors }}
+            {{ form.message.label_tag }}
+            {{ form.message }}
+    </p>
+     <p>
+            {% if form.sender.errors %}
+    <ol>
+    {% for error in form.sender.errors %}
+        <li><strong>{{ error|escape }}</strong></li>
+    {% endfor %}
+    </ol>
+{% endif %}
+            {{ form.sender.label_tag }}
+            {{ form.sender }}
+    </p>
+     <p>
+            {{ form.cc_myself.errors }}
+            {{ form.cc_myself.label_tag }}
+            {{ form.cc_myself }}
+    </p>
+   <p> <input type='submit' value='Send'/></p>
+</form>
