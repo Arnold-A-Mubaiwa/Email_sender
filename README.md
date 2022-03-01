@@ -29,5 +29,5 @@ A django app that send emails to multiple receipiants
 <table>
 <tr><td>Subscriber_id</td></tr>
 <tr><td>email</td></tr>
-<tr><td>Subscriction_id<button>fk</button></td></tr>
+<tr><td>Subscriction_id <small><button>fk</button></small></td></tr>
 </table>
