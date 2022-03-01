@@ -10,7 +10,9 @@ A django app that send emails to multiple receipiants
 <tr><td></td><td></td></tr>
 <tr><td></td><td></td></tr>
 </table>
+
 # Automation
+
 -- Emails Table
 - must have a list of users with there email addresses
 <table>
@@ -18,7 +20,9 @@ A django app that send emails to multiple receipiants
 <tr><td>name</td></tr>
 <tr><td>email</td></tr>
 </table>
+
 -- Subscriptions
+
 <table>
 <tr><td>Subscriction_id</td></tr>
 <tr><td>subscription</td></tr>
