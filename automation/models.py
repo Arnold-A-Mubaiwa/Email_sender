@@ -15,6 +15,9 @@ class Subscription(models.Model):
         return self.name
       
 class Subscriber(models.Model):
-    email = models.OneToOneField(Email, on_delete= models.CASCADE, unique=True)
-    Subscription_type = models.ForeignKey(Subscription, on_delete= models.CASCADE)
+    email = models.ForeignKey(Email, on_delete= models.CASCADE)
+    subscription = models.ForeignKey(Subscription, on_delete= models.CASCADE)
+    
+    # def __str__(self):
+    #     return self.email
     
