@@ -28,8 +28,13 @@ A django app that send emails to multiple receipiants
 
 <table>
 <tr><td>Subscriber_id</td></tr>
-<tr><td>email</td></tr>
-<tr><td>Subscriction_id <small bg-color='blue'><button>fk</button></small></td></tr>
+<tr><td>email<small bg-color='blue'><button>(1:1)</button></small></td></tr>
+<tr><td>Subscriction_id <small bg-color='blue'><button>FK</button></small></td></tr>
 </table>
 
-<h1>Email</h1>
+<h1>Email Form</h1>
+
+- get the subscription type
+- the subject of the email
+- the message
+- cc self checkbox
