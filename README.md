@@ -38,3 +38,7 @@ A django app that send emails to multiple receipiants
 - the subject of the email
 - the message
 - cc self checkbox
+
+<h1>HTML Styling</h1>
+
+- use crispy forms

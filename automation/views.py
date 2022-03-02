@@ -16,16 +16,20 @@ def sendauto(request):
             cc_myself = form.cleaned_data['cc_myself']
             
             sender='arnold@gmail.com'
-            recipants = []
+            recipients = []
             for r_list in Subscriber.objects.filter(subscription = subscription):
-                recipants.append(r_list.email)
+                # recipients.append(r_list.email)
+                recipients = [r_list.email]
                 
-            if cc_myself:
-                recipants.append(sender)
-            message += subscription    
-            send_mail(subject, message,sender, recipants)
-            return HttpResponse('Thanks')
+                if cc_myself:
+                    recipients.append(sender)
+                message += subscription    
+                send_mail(subject, message,sender, recipients)
+            msg ='Thanks, Message sent!'
+            form = Sendmail()
+            return render(request, 'mail/index.html',{'form':form,'msg':msg})
     else:
         form = Sendmail()
+        msg = 'Message not sent.'
         return render(request, 'mail/index.html',{'form':form})
     
