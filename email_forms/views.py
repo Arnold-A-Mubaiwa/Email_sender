@@ -7,11 +7,9 @@ def index(request):
     if request.method == 'POST':
         form = NameForm(request.POST)
         if form.is_valid():
-            
             return HttpResponse('Thanks')
     else:
         form = NameForm()
-            
     return render(request, 'forms/index.html', {'form':form})
 
 def contact_us(request):
